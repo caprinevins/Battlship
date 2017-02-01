@@ -14,6 +14,18 @@ var guesses = 0;
 /*logic for whether ship is alive or not. set to false initially because ship will be alive at the beginning of game*/
 var isSunk = false;
 
+guess = prompt("Ready, aim, fire! (Enter a number from 0-6):");
+
+while (isSunk == false) {
+  guess = prompt("Ready, aim, fire again! (Enter a number from 0-6):");
+  if (guess < 0 || guess > 6) {
+    alert("Don't be a fool! Guess between 0-6!");
+  } else {
+    guesses = guesses + 1;
+  }
+}
+
+
 /*pseudo code for the game:
 
 LOOP while the ship is not sunk
