@@ -22,6 +22,10 @@ while (isSunk == false) {
     alert("Don't be a fool! Guess between 0-6!");
   } else {
     guesses = guesses + 1;
+    
+    if (guess == location1 || guess == location2 || guess == location3) {
+      hits = hits + 1;
+    }
   }
 }
 
