@@ -1,8 +1,9 @@
 
 /*location of the ship*/
-var location1 = 3;
-var location2 = 4;
-var location3 = 5;
+var randomLoc = math.floor(math.random() * 5 );
+var location1 = randomLoc;
+var location2 = location1 + 1;
+var location3 = location2 + 1;
 
 /*user's guess*/
 var guess;
@@ -13,8 +14,6 @@ var guesses = 0;
 
 /*logic for whether ship is alive or not. set to false initially because ship will be alive at the beginning of game*/
 var isSunk = false;
-
-guess = prompt("Ready, aim, fire! (Enter a number from 0-6):");
 
 while (isSunk == false) {
   guess = prompt("Ready, aim, fire again! (Enter a number from 0-6):");
@@ -31,12 +30,11 @@ while (isSunk == false) {
         isSunk = true;
         alert("You sank the Battleship!");
       }
-      else {
+    } else {
         alert("You missed!");
       }
     }
   }
-}
 
 var stats = "You took " + guesses + " guesses to sink the Battlship, " + "which means your shooting accuracy was " + (3 / guesses);
 
